@@ -7,7 +7,7 @@ FROM gcr.io/kaniko-project/executor:v1.7.0-debug
 SHELL ["/busybox/sh", "-c"]
 
 RUN wget -O /kaniko/jq \
-    https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
+    https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64  --no-check-certificate && \
     chmod +x /kaniko/jq && \
     wget -O /kaniko/reg \
     https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386 --no-check-certificate && \
