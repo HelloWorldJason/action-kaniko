@@ -14,8 +14,7 @@ RUN curl -L -o /kaniko/jq \
     chmod +x /kaniko/reg && \
     curl -L -o /crane.tar.gz \ 
     https://github.com/google/go-containerregistry/releases/download/v0.8.0/go-containerregistry_Linux_x86_64.tar.gz && \
-    tar -xvzf /crane.tar.gz crane -C /kaniko && \
-    rm /crane.tar.gz
+    tar -xvzf /crane.tar.gz crane -C /kaniko 
 
 COPY entrypoint.sh /
 COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
