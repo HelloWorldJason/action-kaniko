@@ -10,10 +10,10 @@ RUN wget -O /kaniko/jq \
     https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     chmod +x /kaniko/jq && \
     wget -O /kaniko/reg \
-    https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386 --no-check-certificates && \
+    https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386 --no-check-certificate && \
     chmod +x /kaniko/reg && \
     wget -O /crane.tar.gz \ 
-    https://github.com/google/go-containerregistry/releases/download/v0.8.0/go-containerregistry_Linux_x86_64.tar.gz  --no-check-certificates && \
+    https://github.com/google/go-containerregistry/releases/download/v0.8.0/go-containerregistry_Linux_x86_64.tar.gz  --no-check-certificate && \
     tar -xvzf /crane.tar.gz crane -C /kaniko && \
     rm /crane.tar.gz
 
